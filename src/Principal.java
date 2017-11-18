@@ -201,7 +201,7 @@ public class Principal {
         //p = 6 e r = 10 = 10 - 6 + 1 = 5 elementos
         int n = r - p + 1;
         //Calcula a posição da mediana em relação a quantidade de elementos do intervalo de p até r
-        int m = piso(n / 2);
+        int m = piso(n / 2.0);
         //Ordena todo o vetor para encontrar a mediana        
         ordenaPorInsercao(A, p, r); //Ordena todo o vetor para encontrar a mediana                      
         if (n % 2 == 1) {
@@ -243,24 +243,28 @@ public class Principal {
             return A[p - 1];                                        //O(1)
         }
         //Passo 1
-        int n = teto((r - p + 1) / 5);
+        int n = teto((r - p + 1) / 5.0);
         int B[] = new int[n];
+        //Passo 2
         for (int j = 1; j <= n; j++) {
             int med = mediana(A, (p + 5 * (j - 1)), min((p + (5 * j) - 1), r));
             B[j - 1] = A[med - 1];
         }
-        int x = select(B, 1, n, teto(n / 2));
+        //Passo 3
+        int x = select(B, 1, n, teto(n / 2.0));
         int j = busca(A, p, r, x);
         troca(A, j, r);
+        //Passo 4
         int q = particione(A, p, r);
         int k = q - p + 1;                                          //Theta(n)
+        //Passo 5
         if (i == k) { //O valor do pivô é a resposta                //Theta(n)
             return A[q - 1];                                        //O(1)   
         } else {
             if (i < k) {                                            //O(1)   
-                return select(A, p, q - 1, i);               //T(k-1)  
+                return select(A, p, q - 1, i);                      //T(k-1)  
             } else {
-                return select(A, q + 1, r, i - k);           //T(n-k)
+                return select(A, q + 1, r, i - k);                  //T(n-k)
             }
         }
     }
