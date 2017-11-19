@@ -7,7 +7,7 @@
  *
  * Baseado nos slides 49 da aula do dia 22/09/2017  
  * 
- * Página 159 Cormen 3 ed
+ * Página 159 Thomas H. Cormen 3 ed
  *
  * Seleção em Tempo Linear
  *
@@ -43,7 +43,7 @@ public class Principal {
      *
      * Em java pode ser utilizando Math.ceil(double)
      *
-     * @param x Numero real a ser cálculado o teto.
+     * @param x Número real a ser calculado o teto.
      * @return um valor inteiro com o teto de x.
      */
     public static int teto(double x) {
@@ -51,7 +51,7 @@ public class Principal {
         int parteInteira = (int) x;
         //Pego a parte fracionária de x
         double parteFracionaria = x - parteInteira;
-        //Retorno x subtraindo a parte fracionaria e adiciona 1;
+        //Retorno x subtraindo a parte fracionária e adiciona 1;
         return (int) (x - parteFracionaria) + 1;
     }
 
@@ -62,7 +62,7 @@ public class Principal {
      *
      * Em java pode ser utilizando Math.floor(double)
      *
-     * @param x Numero real a ser cálculado o piso.
+     * @param x Número real a ser calculado o piso.
      * @return um valor inteiro com o piso de x.
      */
     public static int piso(double x) {
@@ -70,7 +70,7 @@ public class Principal {
         int parteInteira = (int) x;
         //Pego a parte fracionária de x
         double parteFracionaria = x - parteInteira;
-        //Retorno x subtraindo a parte fracionaria 
+        //Retorno x subtraindo a parte fracionária 
         return (int) (x - parteFracionaria);
     }
 
@@ -230,7 +230,7 @@ public class Principal {
      *
      * A complexidade para o caso médio é Theta(n).
      *
-     * Página 160 Cormen 3 ed
+     * Página 160 Thomas H. Cormen 3 ed
      *
      * @param A Vetor com os valores
      * @param p Posição inicial do vetor
