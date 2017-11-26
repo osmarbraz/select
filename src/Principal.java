@@ -75,11 +75,13 @@ public class Principal {
     }
 
     /**
-     * Retorna o menor valor entre dois valores
+     * Retorna o menor valor entre dois valores inteiros.
      *
-     * @param a primeiro valor
-     * @param b segundo valor
-     * @return o menor valor entre os dois valores
+     * Em java pode ser utilizando Math.min(int a, int b)
+     *
+     * @param a primeiro valor inteiro.
+     * @param b segundo valor inteiro.
+     * @return o menor valor entre os a e b
      */
     public static int min(int a, int b) {
         if (a < b) {
